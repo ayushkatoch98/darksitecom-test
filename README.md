@@ -3,9 +3,9 @@ Test for the company DarkSide Development
 
 # How to run
 
-- Clone the repo using
-- run ./build.sh file 
-- access the website on 'http://127.0.0.1:5172'
+- Clone the repo
+- Run ``./build.sh`` file 
+- access the website on ``http://127.0.0.1:5172``
 
 
 # Technology Used
