@@ -7,6 +7,11 @@ Test for the company DarkSide Development
 - Run ``./build.sh`` file 
 - access the website on ``http://127.0.0.1:5172``
 
+# Testing 
+
+- Unit Tests have been created to test the API. 
+- To run the test following command must be used ``php artisan test`` inside the ``backend`` folder
+- Test code could be found at ``backend/tests/Unit/CustomerTest.php``
 
 # Technology Used
 
