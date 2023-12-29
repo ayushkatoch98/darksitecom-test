@@ -1,5 +1,5 @@
 <template>
-    <div class="container bg-custom-bg-light m-4 p-0 text-white shadow shadow-gray-700 rounded">
+    <div class="container bg-custom-bg-light m-4 p-0 text-white  rounded">
         <h2 class="text-2xl text-center font-semibold m-4 flex-wrap-">Customer Data</h2>
 
         <!-- Table -->

@@ -1,5 +1,5 @@
 <template>
-    <div class="m-2 shadow bg-custom-bg-light shadow-gray-400 rounded h-fit w-full sm:w-2/5">
+    <div class="m-2 shadow bg-custom-bg-light  rounded h-fit w-full sm:w-2/5">
         <div class="">
             <h2 class="text-2xl m-2 text-white font-semibold text-center">{{ header }}</h2>
 
@@ -261,6 +261,7 @@ const onFormSubmit = async (event) => {
             props.addNewCustomerData(res.data);
         }
         else{
+            if (data.id == '') data.id = -1;
             res = await axiosInstance.put('/api/user/' + data.id, data)
             // props.modifyCustomerData(res.data);
             res.data.id = parseInt(res.data.id)
