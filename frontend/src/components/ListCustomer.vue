@@ -19,7 +19,6 @@
                 </tr>
             </thead>    
             <tbody>
-                <!-- Sample data rows go here -->
 
 
                 <tr v-for="(item, index) in customerData" :key="index">
@@ -38,7 +37,6 @@
 
 
 
-                <!-- Add more rows as needed -->
             </tbody>
         </table>
         </div>
@@ -62,6 +60,8 @@ const props = defineProps({
 })
 
 
+// whenever newCustomerData props is changed 
+// this function runs to add / modify a row in the above table
 watch(() => {
     console.log("NEW CUST PROP", props.newCustomerData);
     if (!customerData.value) return;
@@ -78,6 +78,9 @@ watch(() => {
 
 })
 
+// load all customer data
+// TODO: due to project scope, this is alright 
+// but pagination could be added when dealing large amount of data
 onBeforeMount(async () => {
     axiosInstance.get("/api/user").then(res => {
         console.log("response", res);

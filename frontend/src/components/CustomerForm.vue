@@ -236,11 +236,14 @@ const handleErrors = (errors, errorMessage) => {
 }
 
 
+// handles form submissions for both 
+// create and update form
 const onFormSubmit = async (event) => {
 
     event.preventDefault();
     let data = {};
 
+    // storing all the formdata into `data` variable
     for (const key in formData.value) {
 
         const value = formData.value[key];
@@ -286,8 +289,5 @@ const onFormSubmit = async (event) => {
 }
 
 
-
-
-// props.onFormSubmit();
 
 </script>

@@ -34,13 +34,18 @@ import CustomerForm from '../components/CustomerForm.vue'
 import ListCustomer from '../components/ListCustomer.vue'
 import { onBeforeMount, ref } from 'vue'
 
+// responsible for toggling between 
+// create and update form 
 const toggleButtonState = ref(false);
+
+// whenever a customer data create added using the above form
+// its stored into this variable which is then used by the 
+// ListCustomer to display in the table 
 const newCustomerData = ref({});
 
-const addNewCustomerToTable = (data) => {
-    console.log("running this shit", data)
-    newCustomerData.value = data;
 
+const addNewCustomerToTable = (data) => {
+    newCustomerData.value = data;
 }
 
 </script>
