@@ -1,7 +1,7 @@
 <template>
-    <div class="m-2 shadow bg-gray-900 shadow-gray-400 rounded h-fit w-full sm:w-2/5">
+    <div class="m-2 shadow bg-custom-bg-light shadow-gray-400 rounded h-fit w-full sm:w-2/5">
         <div class="">
-            <h2 class="text-2xl m-2 text-gray-400 font-semibold text-center">{{ header }}</h2>
+            <h2 class="text-2xl m-2 text-white font-semibold text-center">{{ header }}</h2>
 
             <form @submit.prevent="onFormSubmit" class="text-white h-auto">
 
@@ -9,7 +9,7 @@
 
                 <div v-if="props.formMode == 'update'" class="relative m-2">
                     <input v-model="formData.id.content" type="text" id="id"
-                        class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-900 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                        class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-custom-bg-light border-1  border-custom-bg appearance-none dark:text-white dark:border-gray-600 dark:focus:border-custom-accent focus:border-b-2 focus:outline-none focus:ring-0 focus:border-custom-accent peer"
                         placeholder=" " />
                     <label for="id"
                         class="absolute text-sm text-gray-500 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
@@ -22,7 +22,7 @@
 
                     <div class="relative m-2 w-1/2">
                         <input v-model="formData.first_name.content" type="text" id="first_name"
-                            class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-900 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-custom-bg-light border-0  border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-custom-accent focus:border-b-2 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                             placeholder=" " />
                         <label for="first_name"
                             class="absolute text-sm text-gray-500 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
@@ -33,7 +33,7 @@
 
                     <div class="relative m-2 w-1/2">
                         <input v-model="formData.last_name.content" type="text" id="last_name"
-                            class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-900 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-custom-bg-light border-0  border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-custom-accent focus:border-b-2 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                             placeholder=" " />
                         <label for="last_name"
                             class="absolute text-sm text-gray-500 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
@@ -45,7 +45,7 @@
                 <!-- Email -->
                 <div class="relative m-2">
                     <input v-model="formData.email.content" type="text" id="email"
-                        class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-900 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                        class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-custom-bg-light border-0  border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-custom-accent focus:border-b-2 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                         placeholder=" " />
                     <label for="email"
                         class="absolute text-sm text-gray-500 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
@@ -57,7 +57,7 @@
                 <!-- Phone Number -->
                 <div class="relative m-2">
                     <input v-model="formData.phone_no.content" type="text" id="phone_no"
-                        class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-900 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                        class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-custom-bg-light border-0  border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-custom-accent focus:border-b-2 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                         placeholder=" " />
                     <label for="phone_no"
                         class="absolute text-sm text-gray-500 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
@@ -72,7 +72,7 @@
                     <!-- Address Line One -->
                     <div class="relative m-2 w-1/2">
                         <input v-model="formData.address_line_one.content" type="text" id="address_line_one"
-                            class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-900 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-custom-bg-light border-0  border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-custom-accent focus:border-b-2 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                             placeholder=" " />
                         <label for="address_line_one"
                             class="absolute text-sm text-gray-500 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
@@ -84,7 +84,7 @@
                     <!-- Address Line Two -->
                     <div class="relative m-2 w-1/2">
                         <input v-model="formData.address_line_two.content" type="text" id="address_line_two"
-                            class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-900 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-custom-bg-light border-0  border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-custom-accent focus:border-b-2 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                             placeholder=" " />
                         <label for="address_line_two"
                             class="absolute text-sm text-gray-500 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
@@ -98,7 +98,7 @@
                     <!-- Postal Code -->
                     <div class="relative m-2">
                         <input v-model="formData.postal_code.content" type="text" id="post_code"
-                            class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-900 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-custom-bg-light border-0  border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-custom-accent focus:border-b-2 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                             placeholder=" " />
                         <label for="post_code"
                             class="absolute text-sm text-gray-500 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
@@ -112,7 +112,7 @@
 
                     <div class="relative m-2">
                         <input v-model="formData.city.content" type="text" id="city"
-                            class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-900 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            class="block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-custom-bg-light border-0  border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-custom-accent focus:border-b-2 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                             placeholder=" " />
                         <label for="city"
                             class="absolute text-sm text-gray-500 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
@@ -133,9 +133,9 @@
                 </div>
                 <div class="m-4">
                     <button v-if="props.formMode == 'create'" type="submit"
-                        class="w-full bg-gray-900 text-white p-2 border border-gray-600 rounded-md hover:bg-gray-600">Create</button>
+                        class="w-full bg-custom-accent text-white p-2 border border-custom-accent-light rounded-md hover:bg-custom-accent-light">Create</button>
                     <button v-else-if="props.formMode == 'update'" type="submit"
-                        class="w-full bg-gray-900 text-white p-2 border border-gray-600 rounded-md hover:bg-gray-600">Update</button>
+                        class="w-full bg-custom-accent text-white p-2 border border-custom-accent-light rounded-md hover:bg-custom-accent-light">Update</button>
                 </div>
                 <!-- Submit Button -->
 
@@ -144,6 +144,9 @@
     </div>
 </template>
 
+<style scoped>
+
+</style>
 
 <script setup>
 

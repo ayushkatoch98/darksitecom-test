@@ -1,10 +1,10 @@
 <template>
-    <div class="container bg-gray-900 m-4 p-0 text-white shadow shadow-gray-700 rounded">
+    <div class="container bg-custom-bg-light m-4 p-0 text-white shadow shadow-gray-700 rounded">
         <h2 class="text-2xl text-center font-semibold m-4 flex-wrap-">Customer Data</h2>
 
         <!-- Table -->
         <div class="relative overflow-x-auto">
-        <table class="w-full table table-auto bg-gray-800 border text-left overflow-x-scrolldw border-gray-700">
+        <table class="w-full table table-auto bg-custom-bg-light  text-left overflow-x-scrolldw border-gray-700">
             <thead>
                 <tr>
                     <th class="py-2 px-4 border-b border-gray-700">ID</th>
