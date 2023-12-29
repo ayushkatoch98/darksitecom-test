@@ -1,7 +1,7 @@
 <template>
     <div class="m-2 shadow bg-custom-bg-light  rounded h-fit w-full sm:w-2/5">
         <div class="">
-            <h2 class="text-2xl m-2 text-white font-semibold text-center">{{ header }}</h2>
+            <h2 class="text-2xl m-2 text-gray-300 font-semibold text-center">{{ header }}</h2>
 
             <form @submit.prevent="onFormSubmit" class="text-white h-auto">
 
