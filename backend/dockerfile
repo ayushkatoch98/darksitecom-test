@@ -1,0 +1,38 @@
+# Use the official Ubuntu image as a base
+FROM php:8.3
+# FROM composer
+# Set the working directory in the container
+
+WORKDIR /var/www/
+COPY . .
+
+ARG DEBIAN_FRONTEND=noninteractive
+
+# Update package lists and install required software
+RUN apt-get update
+
+
+RUN apt-get install -y \
+        zip \
+        unzip
+
+RUN apt-get install -y \
+        nodejs \
+        npm 
+
+COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
+
+# Print installed versions for verification
+RUN php --version && \
+    node --version && \
+    npm --version
+
+RUN composer install --no-interaction
+
+RUN npm install
+
+RUN php artisan migrate --force -n
+
+EXPOSE 8080
+
+CMD php artisan serve --host=0.0.0.0 --port=8080

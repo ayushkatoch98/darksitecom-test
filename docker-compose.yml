@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  frontend:
+    container_name: darksitefrontend
+    build:
+      context: ./frontend
+      dockerfile: dockerfile
+      
+    ports:
+      - "5173:5173"  # Map the host port 8080 to the container port 80
+
+  backend:
+    container_name: darksitebackend
+    build:
+      context: ./backend
+      dockerfile: dockerfile
+    ports:
+      - "8000:8080"  # Map the host port 3000 to the container port 3000
